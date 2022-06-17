@@ -93,10 +93,16 @@ batch
 run-batch
 (ommitted...)
 ```
-The awesome part of it is that you can create copy of single parts of your profile. For example here is how to reverse engineer the infinispan subsystem you can run:
+The awesome part of it is that you can create copy of single parts of your profile. For example here is how to reverse engineer the **infinispan** subsystem you can run:
+```shell
+./profilecloner.sh -f save-script.cli  --controller=localhost --username=admin --password=admin /subsystem=infinispan infinispan
+```
+## Running Profile Cloner in Domain mode
+To run Profile Cloner in Domain mode requires you to add the domain profile that you want to clone. For example, if you were to clone the full-ha profile of your Domain configuration you can run:
 ```shell
 ./profilecloner.sh -f save-script.cli  --controller=localhost --username=admin --password=admin /profile=full-ha full-ha
 ```
+
 Now your **save-script.cli** contains all the CLI configuration for your profile:
 ```cli
 batch
