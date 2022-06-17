@@ -97,6 +97,11 @@ The awesome part of it is that you can create copy of single parts of your profi
 ```shell
 ./profilecloner.sh -f save-script.cli  --controller=localhost --username=admin --password=admin /subsystem=infinispan infinispan
 ```
+reverse engine the **elytron** subsystem 
+```shell
+>profilecloner.bat  -f  save-script-elytron.cli  --controller=localhost --username=admin --password=123456 /subsystem=elytron elytron
+```
+
 ## Running Profile Cloner in Domain mode
 To run Profile Cloner in Domain mode requires you to add the domain profile that you want to clone. For example, if you were to clone the full-ha profile of your Domain configuration you can run:
 ```shell
